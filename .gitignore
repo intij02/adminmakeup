@@ -131,3 +131,5 @@ vendor/
 *.log
 sftp-config.json
 
+Dockerfile
+docker-compose.yml
