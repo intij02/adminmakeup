@@ -1,0 +1,22 @@
+:root {
+    --legacy-bg: #fafbfe;
+    --legacy-header: #184a62;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background: var(--legacy-bg);
+}
+
+.legacy-header {
+    background: var(--legacy-header);
+}
+
+.card {
+    border-radius: 0.8rem;
+}
+
+.table td,
+.table th {
+    vertical-align: middle;
+}
