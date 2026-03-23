@@ -130,13 +130,7 @@ node_modules/
 vendor/
 *.log
 /llave
-bitacoracdmx.pem
 sftp-config.json
 
-public/img/*
-public/pagos/*
-public/saldos/*
-
-!public/img/.gitkeep
-!public/pagos/.gitkeep
-!public/saldos/.gitkeep
+docker-compose.yml
+Dockerfile
