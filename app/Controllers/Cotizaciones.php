@@ -510,17 +510,15 @@ public function borrar_lista()
 	}
 	public function upd_prods(){
 		$mdProductos = new ProductosModel();
-		$productos = $mdProductos->findAll();
+		$productos = $mdProductos->withDeleted()->findAll();
 		//$productos = $mdProductos->where('app', 1)->findAll();
 		session()->set('productosAppEdit', $productos);
 		session()->set('productosApp', $productos);
 	}
 	private function getProductosApp(){
-		if(!session()->has('productosApp')){
-			$mdProductos = new ProductosModel();
-			$productos = $mdProductos->findAll();
-			session()->set('productosApp', $productos);
-		}
+		$mdProductos = new ProductosModel();
+		$productos = $mdProductos->withDeleted()->findAll();
+		session()->set('productosApp', $productos);
 	}
 	private function getProductosAppEdit(){
 		if(!session()->has('productosAppEdit')){
